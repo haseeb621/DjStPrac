@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Failed</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Subscription Failed</h1>
+        <p>We're sorry, but your subscription could not be processed. Please try again.</p>
+        <a href="{% url 'buy_plan' 'your_price_id' %}">Try Again</a> <!-- Link back to the purchase plan page -->
+        <p>If the problem persists, please contact support.</p>
+    </div>
+</body>
+</html>

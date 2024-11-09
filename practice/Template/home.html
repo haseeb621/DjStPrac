@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 200px;
+            background-color: #1DB954;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #121212;
+            color: white;
+        }
+
+        .main-content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .song-cards {
+            display: flex;
+            gap: 15px;
+        }
+
+        .song-card {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 120px;
+        }
+
+        .song-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .song-card p {
+            margin: 5px 0;
+        }
+
+        /* Playlist Styling */
+        .playlist {
+            margin-top: 20px;
+        }
+
+        .playlist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .playlist-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .playlist-info p {
+            margin: 2px 0;
+        }
+
+        /* Player Bar Styling */
+        .player-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1>MUSIC</h1>
+        <ul>
+            <li>Home</li>
+            <li>Search</li>
+            <li>Your Library</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Good Evening</h2>
+
+        <!-- Song Cards -->
+        <div class="song-cards">
+            <div class="song-card">
+                <img src="https://via.placeholder.com/150" alt="Album Cover">
+                <p>Song Title</p>
+                <p>Artist Name</p>
+            </div>
+            <div class="song-card">
+                <img src="https://via.placeholder.com/150" alt="Album Cover">
+                <p>Another Song</p>
+                <p>Artist Name</p>
+            </div>
+            <div class="song-card">
+                <img src="https://via.placeholder.com/150" alt="Album Cover">
+                <p>Third Song</p>
+                <p>Artist Name</p>
+            </div>
+        </div>
+
+        <!-- Playlist Section -->
+        <h3 style="margin-top: 20px;">Popular Playlist</h3>
+        <div class="playlist">
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/50" alt="Album Cover">
+                <div class="playlist-info">
+                    <p>Playlist Song 1</p>
+                    <p>Artist Name</p>
+                </div>
+            </div>
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/50" alt="Album Cover">
+                <div class="playlist-info">
+                    <p>Playlist Song 2</p>
+                    <p>Artist Name</p>
+                </div>
+            </div>
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/50" alt="Album Cover">
+                <div class="playlist-info">
+                    <p>Playlist Song 3</p>
+                    <p>Artist Name</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar">
+        <p>Now Playing: Song Title - Artist Name</p>
+    </div>
+</body>
+</html>

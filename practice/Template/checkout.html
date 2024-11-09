@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stripe Checkout</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Complete Your Purchase</h1>
+    <button id="checkout-button">Proceed to Payment</button>
+
+    <script>
+        const stripe = Stripe('your-publishable-key-here'); // Replace with your publishable key
+
+        document.getElementById('checkout-button').addEventListener('click', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const priceId = urlParams.get('priceId');
+
+            if (!priceId) {
+                alert('No price ID found');
+                return;
+            }
+
+            const response = await fetch('/create-checkout-session/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ 'priceId': priceId })
+            });
+
+            const { id, error } = await response.json();
+            if (error) {
+                alert(error);
+                return;
+            }
+
+            stripe.redirectToCheckout({ sessionId: id });
+        });
+    </script>
+</body>
+</html>
