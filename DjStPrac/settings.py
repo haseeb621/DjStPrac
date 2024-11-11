@@ -23,7 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-print("Loaded SECRET_KEY:", env("SECRET_KEY", default="NOT LOADED"))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
